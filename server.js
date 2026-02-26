@@ -19,7 +19,7 @@ app.post('/create-checkout', async (req, res) => {
   try {
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
-      line_items: [{ price: 'price_1T4T81H4ofBcEnOZAm9bCnt5', quantity: 1 }],
+      line_items: [{ price: 'price_1T4SutQfw8utOxzB064sibo2', quantity: 1 }],
       success_url: `https://example.com/success?telegram_id=${telegram_id}`,
       cancel_url: `https://example.com/cancel`,
       metadata: { telegram_id } // store telegram_id in Stripe metadata
