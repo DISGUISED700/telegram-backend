@@ -17,6 +17,7 @@ bot.onText(/\/subscribe/, async (msg) => {
       body: JSON.stringify({ telegram_id: chatId })
     });
     const data = await response.json();
+    console.log("Stripe backend response:", data);
 
     // Send a message with an inline button only
     bot.sendMessage(chatId, "Click here ⬇️", {
