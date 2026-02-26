@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
+console.log("Stripe key:", process.env.STRIPE_SECRET_KEY ? "FOUND" : "MISSING");
+
 const app = express();
 app.use(express.json());
 
