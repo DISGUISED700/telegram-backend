@@ -1,7 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 
 const BOT_TOKEN = '8327659219:AAGmzqRGd0jjRxvd1zQXjba5IZUMSH1JPZI'; // replace with your BotFather token
-const BACKEND_URL = 'http://localhost:3000/create-checkout'; // local backend
+const BACKEND_URL = 'https://telegram-backend-production-09d7.up.railway.app/create-checkout';
 
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 
