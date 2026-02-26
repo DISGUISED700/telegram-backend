@@ -1,4 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 const BOT_TOKEN = '8327659219:AAGmzqRGd0jjRxvd1zQXjba5IZUMSH1JPZI'; // replace with your BotFather token
 const BACKEND_URL = 'https://telegram-backend-production-09d7.up.railway.app/create-checkout';
