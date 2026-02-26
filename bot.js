@@ -4,6 +4,8 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 const BOT_TOKEN = '8327659219:AAGmzqRGd0jjRxvd1zQXjba5IZUMSH1JPZI'; // replace with your BotFather token
 const BACKEND_URL = 'https://telegram-backend-production-09d7.up.railway.app/create-checkout';
 
+const bot = new TelegramBot(BOT_TOKEN, { polling: true });
+
 bot.onText(/\/subscribe/, async (msg) => {
   const chatId = msg.chat.id;
 
